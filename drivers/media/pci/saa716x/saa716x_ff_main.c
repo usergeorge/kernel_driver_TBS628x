@@ -49,19 +49,19 @@
 #include "stv090x.h"
 #include "isl6423.h"
 
-unsigned int verbose;
+static unsigned int verbose;
 module_param(verbose, int, 0644);
 MODULE_PARM_DESC(verbose, "verbose startup messages, default is 1 (yes)");
 
-unsigned int int_type;
+static unsigned int int_type;
 module_param(int_type, int, 0644);
 MODULE_PARM_DESC(int_type, "force Interrupt Handler type: 0=INT-A, 1=MSI, 2=MSI-X. default INT-A mode");
 
-unsigned int int_count_enable;
+static unsigned int int_count_enable;
 module_param(int_count_enable, int, 0644);
 MODULE_PARM_DESC(int_count_enable, "enable counting of interrupts");
 
-unsigned int video_capture;
+static unsigned int video_capture;
 module_param(video_capture, int, 0644);
 MODULE_PARM_DESC(video_capture, "capture digital video coming from STi7109: 0=off, 1=one-shot. default off");
 

@@ -38,11 +38,11 @@
 #include "tda1004x.h"
 #include "tda827x.h"
 
-unsigned int verbose;
+static unsigned int verbose;
 module_param(verbose, int, 0644);
 MODULE_PARM_DESC(verbose, "verbose startup messages, default is 1 (yes)");
 
-unsigned int int_type;
+static unsigned int int_type;
 module_param(int_type, int, 0644);
 MODULE_PARM_DESC(int_type, "force Interrupt Handler type: 0=INT-A, 1=MSI, 2=MSI-X. default INT-A mode");
 
